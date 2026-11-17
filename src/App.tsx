@@ -33,7 +33,7 @@ export default function App() {
   
   // Local appointments tracker
   const [appointments, setAppointments] = React.useState<Appointment[]>(() => {
-    const cached = localStorage.getItem('odontofamilia_appointments');
+    const cached = (typeof window !== 'undefined' ? localStorage : { getItem: () => null, setItem: () => {}, removeItem: () => {} }).getItem('odontofamilia_appointments');
     if (cached) {
       try { return JSON.parse(cached); } catch (e) {}
     }
@@ -41,7 +41,7 @@ export default function App() {
   });
 
   React.useEffect(() => {
-    localStorage.setItem('odontofamilia_appointments', JSON.stringify(appointments));
+    (typeof window !== 'undefined' ? localStorage : { getItem: () => null, setItem: () => {}, removeItem: () => {} }).setItem('odontofamilia_appointments', JSON.stringify(appointments));
   }, [appointments]);
 
   // Handle smooth scroll navigation
@@ -117,13 +117,13 @@ export default function App() {
           onExploreTreatments={() => handleNavigate('protesis-realizadas')}
         />
 
-        {/* ¿Qué son los implantes dentales? */}
+        {/* �Qu� son los implantes dentales? */}
         <WhatAreImplants />
 
-        {/* Tipos de prótesis dentales que realizamos */}
+        {/* Tipos de pr�tesis dentales que realizamos */}
         <ProtesisTypes onOpenBooking={() => openBookingWizard()} />
 
-        {/* ¿Para quién son los implantes dentales? */}
+        {/* �Para qui�n son los implantes dentales? */}
         <ForWhoImplants />
 
         {/* Step-by-step Surgical Process and Trust Pillars */}
@@ -181,20 +181,20 @@ export default function App() {
               </div>
 
               <p className="text-slate-400 text-xs md:text-sm leading-relaxed max-w-sm">
-                Odontología avanzada y especialistas titulados con dedicación absoluta. Tu clínica dental de total confianza en Mallorca.
+                Odontolog�a avanzada y especialistas titulados con dedicaci�n absoluta. Tu cl�nica dental de total confianza en Mallorca.
               </p>
 
               <div className="text-[10px] text-slate-500">
-                Nº Registro Sanitario: C-07-3532-DF <br />
-                © {new Date().getFullYear()} Odonto Familia S.L. Todos los derechos reservados.
+                N� Registro Sanitario: C-07-3532-DF <br />
+                � {new Date().getFullYear()} Odonto Familia S.L. Todos los derechos reservados.
               </div>
             </div>
 
             {/* Quick Sede Palma info - 4 Cols */}
             <div className="md:col-span-4 space-y-3 text-xs md:text-sm">
-              <h4 className="font-bold text-slate-200 uppercase tracking-widest text-[11px]">Clínica Dental Odontofamilia (Palma)</h4>
+              <h4 className="font-bold text-slate-200 uppercase tracking-widest text-[11px]">Cl�nica Dental Odontofamilia (Palma)</h4>
               <p className="text-slate-400 leading-relaxed">
-                C/ de Lluís Martí, 50, Llevant<br />
+                C/ de Llu�s Mart�, 50, Llevant<br />
                 07005 Palma, Illes Balears
               </p>
               <div className="space-y-1">
@@ -211,7 +211,7 @@ export default function App() {
 
             {/* Quick Sede Manacor info - 4 Cols */}
             <div className="md:col-span-4 space-y-3 text-xs md:text-sm">
-              <h4 className="font-bold text-slate-200 uppercase tracking-widest text-[11px]">Clínica dental odontofamilia Manacor Palma</h4>
+              <h4 className="font-bold text-slate-200 uppercase tracking-widest text-[11px]">Cl�nica dental odontofamilia Manacor Palma</h4>
               <p className="text-slate-400 leading-relaxed">
                 Avinguda d'es Torrent, 35<br />
                 07500 Manacor, Illes Balears
@@ -233,13 +233,13 @@ export default function App() {
           {/* Bottom line certifications */}
           <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-start">
-              <span>● Colegiados en COEB Baleares</span>
-              <span>● Certificaciones de Calidad ISO 9001</span>
-              <span>● Radiodiagnóstico 3D Digital Homologado</span>
+              <span>� Colegiados en COEB Baleares</span>
+              <span>� Certificaciones de Calidad ISO 9001</span>
+              <span>� Radiodiagn�stico 3D Digital Homologado</span>
             </div>
             
             <span className="text-slate-500 flex items-center gap-1">
-              Diseño de Interfaz conforme al estándar Odonto Familia Palma.
+              Dise�o de Interfaz conforme al est�ndar Odonto Familia Palma.
             </span>
           </div>
 
