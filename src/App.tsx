@@ -168,79 +168,79 @@ export default function App() {
       />
 
       {/* Styled Footer */}
-      <footer className="bg-slate-900 text-white border-t border-slate-800 py-16">
+      <footer className="bg-[#0e1a2f] text-[#a7b4c8] py-16" style={{fontFamily:'"Plus Jakarta Sans", system-ui, sans-serif'}}>
         <div className="max-w-6xl mx-auto px-4 md:px-8">
-          
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-            
-            {/* Clinician Brand details - 4 Cols */}
-            <div className="md:col-span-4 space-y-4">
-              <div className="flex items-baseline text-lg md:text-xl font-extrabold tracking-tight">
-                <span className="text-white">Odonto</span>
-                <span className="text-emerald-400 ml-0.5">Familia</span>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+
+            {/* Col 1: Brand */}
+            <div className="md:col-span-1 space-y-4">
+              <div className="flex items-baseline text-lg font-extrabold tracking-tight">
+                <span className="text-[#1e3a8a]">Odonto</span>
+                <span className="text-[#0faa76] ml-1">Familia</span>
               </div>
-
-              <p className="text-slate-400 text-xs md:text-sm leading-relaxed max-w-sm">
-                Odontolog�a avanzada y especialistas titulados con dedicaci�n absoluta. Tu cl�nica dental de total confianza en Mallorca.
+              <p className="text-[#a7b4c8] text-sm leading-relaxed">
+                Clínica dental familiar en Manacor y Palma de Mallorca. Dos centros propios con más de 12 años cuidando la sonrisa de familias del Llevant de Mallorca. Odontología general, infantil y avanzada para toda la familia.
               </p>
-
-              <div className="text-[10px] text-slate-500">
-                N� Registro Sanitario: C-07-3532-DF <br />
-                � {new Date().getFullYear()} Odonto Familia S.L. Todos los derechos reservados.
+              <div className="text-xs text-[#566477] space-y-1">
+                <p>Nº Registro Sanitario: C-07-3532-DF</p>
+                <p>© 2026 Odonto Familia S.L. Todos los derechos reservados.</p>
               </div>
             </div>
 
-            {/* Quick Sede Palma info - 4 Cols */}
-            <div className="md:col-span-4 space-y-3 text-xs md:text-sm">
-              <h4 className="font-bold text-slate-200 uppercase tracking-widest text-[11px]">Cl�nica Dental Odontofamilia (Palma)</h4>
-              <p className="text-slate-400 leading-relaxed">
-                C/ de Llu�s Mart�, 50, Llevant<br />
-                07005 Palma, Illes Balears
-              </p>
-              <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-slate-350">
-                  <span className="font-semibold text-slate-300">Tlf:</span>
-                  <a href="tel:+34673780895" className="hover:text-blue-400 hover:underline">673 78 08 95</a>
-                </div>
-                <div className="flex items-center gap-1.5 text-slate-350">
-                  <span className="font-semibold text-slate-300">Email:</span>
-                  <a href="mailto:odontofamiliapalma@gmail.com" className="hover:text-blue-400 hover:underline">odontofamiliapalma@gmail.com</a>
-                </div>
+            {/* Col 2: Tratamientos */}
+            <div className="space-y-3">
+              <h4 className="text-white text-xs font-bold uppercase tracking-widest">Tratamientos</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/tratamientos/odontopediatria" className="text-[#8695ae] hover:text-white transition-colors">Odontopediatría — Dentista Infantil</a></li>
+                <li><a href="/tratamientos/estetica-dental" className="text-[#8695ae] hover:text-white transition-colors">Estética Dental y Blanqueamiento</a></li>
+                <li><a href="/tratamientos/ortodoncia" className="text-[#8695ae] hover:text-white transition-colors">Ortodoncia — Brackets e Invisalign</a></li>
+                <li><a href="/tratamientos/implantes-dentales" className="text-[#8695ae] hover:text-white transition-colors">Implantes Dentales</a></li>
+                <li><a href="/tratamientos/limpieza-dental" className="text-[#8695ae] hover:text-white transition-colors">Limpieza Dental Profesional</a></li>
+                <li><a href="/urgencias-palma" className="text-[#8695ae] hover:text-white transition-colors">Urgencias Dentales — Mismo Día</a></li>
+              </ul>
+            </div>
+
+            {/* Col 3: Blog */}
+            <div className="space-y-3">
+              <h4 className="text-white text-xs font-bold uppercase tracking-widest">Blog</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/blog/que-es-la-limpieza-dental-profesional" className="text-[#8695ae] hover:text-white transition-colors">¿Qué es la limpieza dental profesional?</a></li>
+                <li><a href="/blog/odontopediatria-guia-completa" className="text-[#8695ae] hover:text-white transition-colors">Odontopediatría: guía completa</a></li>
+              </ul>
+            </div>
+
+            {/* Col 4: Clínica Palma */}
+            <div className="space-y-3">
+              <h4 className="text-white text-xs font-bold uppercase tracking-widest">Clínica Dental Odontofamilia Palma</h4>
+              <div className="text-sm space-y-2 text-[#8695ae]">
+                <p>C/ de Lluís Martí, 50 — Llevant<br/>07005 Palma de Mallorca, Illes Balears</p>
+                <p><span className="text-[#cbd5e1] font-semibold">Tlf:</span> <a href="tel:+34673780895" className="hover:text-white transition-colors">673 780 895</a></p>
+                <p><span className="text-[#cbd5e1] font-semibold">Email:</span> <a href="mailto:odontofamiliapalma@gmail.com" className="hover:text-white transition-colors">odontofamiliapalma@gmail.com</a></p>
+                <p><span className="text-[#cbd5e1] font-semibold">Horario:</span> Lunes a sábado 9:00–14:00 / 15:00–21:00</p>
+                <p><span className="text-[#cbd5e1] font-semibold">Urgencias:</span> cualquier día del año</p>
               </div>
             </div>
 
-            {/* Quick Sede Manacor info - 4 Cols */}
-            <div className="md:col-span-4 space-y-3 text-xs md:text-sm">
-              <h4 className="font-bold text-slate-200 uppercase tracking-widest text-[11px]">Cl�nica dental odontofamilia Manacor Palma</h4>
-              <p className="text-slate-400 leading-relaxed">
-                Avinguda d'es Torrent, 35<br />
-                07500 Manacor, Illes Balears
-              </p>
-              <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-slate-350">
-                  <span className="font-semibold text-slate-300">Tlf:</span>
-                  <a href="tel:+34647461382" className="hover:text-blue-400 hover:underline">647 46 13 82</a>
-                </div>
-                <div className="flex items-center gap-1.5 text-slate-350">
-                  <span className="font-semibold text-slate-300">Email:</span>
-                  <a href="mailto:odontofamiliapalma@gmail.com" className="hover:text-blue-400 hover:underline">odontofamiliapalma@gmail.com</a>
-                </div>
+            {/* Col 5: Clínica Manacor */}
+            <div className="space-y-3">
+              <h4 className="text-white text-xs font-bold uppercase tracking-widest">Clínica Dental Odontofamilia Manacor</h4>
+              <div className="text-sm space-y-2 text-[#8695ae]">
+                <p>Avinguda d'es Torrent, 35<br/>07500 Manacor, Illes Balears</p>
+                <p><span className="text-[#cbd5e1] font-semibold">Tlf:</span> <a href="tel:+34613914519" className="hover:text-white transition-colors">613 91 45 19</a></p>
+                <p><span className="text-[#cbd5e1] font-semibold">Email:</span> <a href="mailto:odontofamiliapalma@gmail.com" className="hover:text-white transition-colors">odontofamiliapalma@gmail.com</a></p>
+                <p><span className="text-[#cbd5e1] font-semibold">Horario:</span> Lunes a sábado 9:00–14:00 / 15:00–21:00</p>
+                <p><span className="text-[#cbd5e1] font-semibold">Urgencias:</span> cualquier día del año</p>
               </div>
             </div>
 
           </div>
 
-          {/* Bottom line certifications */}
-          <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-start">
-              <span>� Colegiados en COEB Baleares</span>
-              <span>� Certificaciones de Calidad ISO 9001</span>
-              <span>� Radiodiagn�stico 3D Digital Homologado</span>
-            </div>
-            
-            <span className="text-slate-500 flex items-center gap-1">
-              Dise�o de Interfaz conforme al est�ndar Odonto Familia Palma.
-            </span>
+          {/* Bottom bar */}
+          <div className="border-t border-white/10 mt-12 pt-6 flex flex-wrap gap-6 text-xs text-[#566477]">
+            <span>● Colegiados en COEB Baleares</span>
+            <span>● Certificación de Calidad ISO 9001</span>
+            <span>● Radiodiagnóstico 3D Digital Homologado</span>
+            <span>● Especialistas en Odontología Infantil y Familiar</span>
           </div>
 
         </div>
