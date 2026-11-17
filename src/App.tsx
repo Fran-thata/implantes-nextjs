@@ -191,12 +191,15 @@ export default function App() {
             <div className="space-y-3">
               <h4 className="text-white text-xs font-bold uppercase tracking-widest">Tratamientos</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/tratamientos/odontopediatria" className="text-[#8695ae] hover:text-white transition-colors">Odontopediatría — Dentista Infantil</a></li>
-                <li><a href="/tratamientos/estetica-dental" className="text-[#8695ae] hover:text-white transition-colors">Estética Dental y Blanqueamiento</a></li>
-                <li><a href="/tratamientos/ortodoncia" className="text-[#8695ae] hover:text-white transition-colors">Ortodoncia — Brackets e Invisalign</a></li>
-                <li><a href="/tratamientos/implantes-dentales" className="text-[#8695ae] hover:text-white transition-colors">Implantes Dentales</a></li>
-                <li><a href="/tratamientos/limpieza-dental" className="text-[#8695ae] hover:text-white transition-colors">Limpieza Dental Profesional</a></li>
-                <li><a href="/urgencias-palma" className="text-[#8695ae] hover:text-white transition-colors">Urgencias Dentales — Mismo Día</a></li>
+                <li><a href="/tratamientos/implantes-dentales" className="text-[#8695ae] hover:text-white transition-colors">Implantes dentales</a></li>
+                <li><a href="/tratamientos/limpieza-dental" className="text-[#8695ae] hover:text-white transition-colors">Limpieza dental</a></li>
+                <li><a href="/tratamientos/estetica-dental" className="text-[#8695ae] hover:text-white transition-colors">Estética dental</a></li>
+                <li><a href="/tratamientos/ortodoncia" className="text-[#8695ae] hover:text-white transition-colors">Ortodoncia</a></li>
+                <li><a href="/tratamientos/ortodoncia-invisible" className="text-[#8695ae] hover:text-white transition-colors">Ortodoncia invisible</a></li>
+                <li><a href="/tratamientos/odontopediatria" className="text-[#8695ae] hover:text-white transition-colors">Odontopediatría</a></li>
+                <li><a href="/tratamientos/endodoncia" className="text-[#8695ae] hover:text-white transition-colors">Endodoncia</a></li>
+                <li><a href="/tratamientos/protesis-dentales" className="text-[#8695ae] hover:text-white transition-colors">Prótesis dentales</a></li>
+                <li><a href="/tratamientos/cirugia-oral" className="text-[#8695ae] hover:text-white transition-colors">Cirugía oral</a></li>
               </ul>
             </div>
 
