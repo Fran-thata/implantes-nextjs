@@ -36,7 +36,7 @@ export default function Testimonials() {
   ];
 
   const [testimonials, setTestimonials] = React.useState<CustomReview[]>(() => {
-    const cached = localStorage.getItem('odontofamilia_custom_reviews');
+    const cached = (typeof window !== 'undefined' ? localStorage : { getItem: () => null, setItem: () => {}, removeItem: () => {} }).getItem('odontofamilia_custom_reviews');
     if (cached) {
       try { return JSON.parse(cached); } catch (e) {}
     }
@@ -51,7 +51,7 @@ export default function Testimonials() {
   const [isSuccess, setIsSuccess] = React.useState(false);
 
   React.useEffect(() => {
-    localStorage.setItem('odontofamilia_custom_reviews', JSON.stringify(testimonials));
+    (typeof window !== 'undefined' ? localStorage : { getItem: () => null, setItem: () => {}, removeItem: () => {} }).setItem('odontofamilia_custom_reviews', JSON.stringify(testimonials));
   }, [testimonials]);
 
   const handleSubmit = (e: React.FormEvent) => {
