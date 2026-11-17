@@ -22,7 +22,7 @@ export default function CallbackForm() {
       setIsSubmitted(true);
 
       // Save submission to local history
-      const savedSubmissions = localStorage.getItem('odontofamilia_callback_leads');
+      const savedSubmissions = (typeof window !== 'undefined' ? localStorage : { getItem: () => null, setItem: () => {}, removeItem: () => {} }).getItem('odontofamilia_callback_leads');
       const leads = savedSubmissions ? JSON.parse(savedSubmissions) : [];
       leads.push({
         nombre,
@@ -33,7 +33,7 @@ export default function CallbackForm() {
         mensaje,
         date: new Date().toISOString()
       });
-      localStorage.setItem('odontofamilia_callback_leads', JSON.stringify(leads));
+      (typeof window !== 'undefined' ? localStorage : { getItem: () => null, setItem: () => {}, removeItem: () => {} }).setItem('odontofamilia_callback_leads', JSON.stringify(leads));
 
       // Reset
       setNombre('');
